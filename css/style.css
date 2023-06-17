@@ -3,6 +3,12 @@ html {
   font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: #fff;
   margin: 0;
@@ -221,6 +227,46 @@ p {
 .content__container .schedule_list .schedule_list-rule-group .calendar-item-arrow {
   margin: 4px 0px;
 }
+.content__container .news_list {
+  width: 100%;
+}
+.content__container .news_list__top {
+  background-color: #e3dcfe;
+  border: 1px solid #fff;
+  border-radius: 50px 50px 0px 0px;
+  box-sizing: border-box;
+  position: relative;
+}
+.content__container .news_list__top .list-image img {
+  border-radius: 50px 50px 0px 0px;
+  width: 100%;
+}
+.content__container .news_list__top .top_content {
+  width: 100%;
+  display: flex;
+  vertical-align: center;
+  position: absolute;
+  bottom: 0px;
+  color: #ff6c47;
+}
+.content__container .news_list__top .top_content__text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  line-height: 1.9;
+  background: rgba(250, 250, 250, 0.75);
+}
+.content__container .news_list__top .top_content__btn {
+  position: absolute;
+  right: 0;
+  min-width: 10rem;
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #ff3e01;
+  text-decoration: none;
+  color: #fff;
+  z-index: 4;
+}
 .content__container .tournament {
   width: 100%;
   background-color: #fff;
@@ -412,15 +458,90 @@ p {
 }
 .content__container .leaderboard__right {
   width: 50%;
+  display: flex;
+  flex-direction: column;
 }
-.content__container .leaderboard__right table {
+.content__container .leaderboard__right__group {
+  display: flex;
+  align-items: center;
+}
+.content__container .leaderboard__right__group .label {
+  font-style: 2.5rem;
+  font-weight: 300;
+  color: #fff;
+  padding: 5px 20px;
+  min-width: 80px;
+}
+.content__container .leaderboard__right__group .leaderbord-custom-select {
+  position: relative;
+}
+.content__container .leaderboard__right__group .leaderbord-custom-select select {
+  display: none;
+}
+.content__container .leaderboard__right__group .select-selected {
+  background-color: #fff;
+  border-radius: 5px;
+  min-height: 30px;
+  font-size: 1.5rem;
+}
+.content__container .leaderboard__right__group .select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #9016ff transparent transparent transparent;
+}
+.content__container .leaderboard__right__group .select-selected.select-arrow-active:after {
+  border-color: transparent transparent #9016ff transparent;
+  top: 5px;
+}
+.content__container .leaderboard__right__group .select-selected.select-arrow-active {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.content__container .leaderboard__right__group .select-items div,
+.content__container .leaderboard__right__group .select-selected {
+  color: #8a8889;
+  font-size: 1.5rem;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.content__container .leaderboard__right__group .select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-style: solid;
+  border-color: rgba(160, 0, 253, 0.4);
+  border-width: 0px 1px 1px 1px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.content__container .leaderboard__right__group .select-hide {
+  display: none;
+}
+.content__container .leaderboard__right__group .select-items div:hover,
+.content__container .leaderboard__right__group .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.content__container .leaderboard__right__table {
   border-collapse: separate;
   border-spacing: 0 15px;
   text-align: center;
-  font-size: 1.7rem;
   margin: 0 auto;
+  font-size: 1.7rem;
 }
-.content__container .leaderboard__right table .num_col {
+.content__container .leaderboard__right__table .num_col {
   height: 37px;
   width: 45px;
   background-size: cover;
@@ -432,41 +553,41 @@ p {
   font-family: "Microsoft YaHei", serif;
   line-height: 1.9;
 }
-.content__container .leaderboard__right table .top-icon {
+.content__container .leaderboard__right__table .top-icon {
   background: url(../imgs/leaderboard/stt1.png) center 0 no-repeat;
 }
-.content__container .leaderboard__right table .normal-icon {
+.content__container .leaderboard__right__table .normal-icon {
   background: url(../imgs/leaderboard/stt.png) center 0 no-repeat;
 }
-.content__container .leaderboard__right table thead td {
+.content__container .leaderboard__right__table thead td {
   background-color: #00ccff;
   color: #fff;
   font-size: 2rem;
   font-weight: 500;
   border: none;
 }
-.content__container .leaderboard__right table thead td:first-of-type {
+.content__container .leaderboard__right__table thead td:first-of-type {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
-.content__container .leaderboard__right table thead td:last-of-type {
+.content__container .leaderboard__right__table thead td:last-of-type {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-.content__container .leaderboard__right table .c21 {
+.content__container .leaderboard__right__table .c21 {
   position: relative;
 }
-.content__container .leaderboard__right table .c22 {
+.content__container .leaderboard__right__table .c22 {
   position: absolute;
   top: 25%;
   left: 44%;
 }
-.content__container .leaderboard__right table .c23 {
+.content__container .leaderboard__right__table .c23 {
   position: absolute;
   top: 25%;
   left: 45%;
 }
-.content__container .leaderboard__right table td {
+.content__container .leaderboard__right__table td {
   background: #fff;
   width: 250px;
   height: 39px;
@@ -475,39 +596,80 @@ p {
   border-top: 1px solid #a589e6;
   border-bottom: 1px solid #a589e6;
 }
-.content__container .leaderboard__right table tbody td:first-of-type {
+.content__container .leaderboard__right__table tbody td:first-of-type {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border-top: 1px solid #a589e6;
   border-left: 1px solid #a589e6;
   border-bottom: 1px solid #a589e6;
 }
-.content__container .leaderboard__right table tbody td:last-of-type {
+.content__container .leaderboard__right__table tbody td:last-of-type {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top: 1px solid #a589e6;
   border-right: 1px solid #a589e6;
   border-bottom: 1px solid #a589e6;
 }
-.content__container .leaderboard__right table .ico {
+.content__container .leaderboard__right__table .ico {
   display: inline-block;
   position: absolute;
   width: 33px;
   height: 33px;
   background-size: contain;
 }
-.content__container .leaderboard__right table .rank {
+.content__container .leaderboard__right__table .rank {
   top: 10%;
   left: 22%;
   background: url(../imgs/leaderboard/medal.png) center no-repeat;
 }
-.content__container .leaderboard__right table .starman {
+.content__container .leaderboard__right__table .starman {
   top: 10%;
   left: 36%;
   background: url(../imgs/leaderboard/starperson.png) center no-repeat;
 }
-.content__container .leaderboard__right table .money {
+.content__container .leaderboard__right__table .money {
   top: 10%;
   left: 17%;
   background: url(../imgs/leaderboard/money.png) center no-repeat;
+}
+.content__container .leaderboard__right .pagination {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 4rem;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+.content__container .leaderboard__right .pagination a {
+  color: rgb(255, 255, 255);
+  font-size: 1.4rem;
+  float: left;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+.content__container .leaderboard__right .pagination a + a {
+  margin: 0px 7px;
+}
+.content__container .leaderboard__right .pagination a.active {
+  background-color: #9059ff;
+  color: white;
+  border-radius: 2px;
+}
+.content__container .leaderboard__right .pagination a:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+}
+.content__container .leaderboard__right .pagination .arrow {
+  background: url(../imgs/leaderboard/next.png) center 0 no-repeat;
+  height: 15px;
+  width: 15px;
+  background-size: contain;
+  display: inline-block;
+}
+.content__container .leaderboard__right .pagination .back {
+  transform: rotate(180deg);
+}
+.content__container .leaderboard__right .pagination a:first-child:hover:not(.active) {
+  filter: brightness(0) invert(1);
+}
+.content__container .leaderboard__right .pagination a:last-child:hover:not(.active) {
+  filter: brightness(0) invert(1);
 }/*# sourceMappingURL=style.css.map */
