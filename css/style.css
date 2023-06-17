@@ -1,0 +1,513 @@
+html {
+  font-size: 62.5%;
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.yellow {
+  color: #faef24;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav {
+  background: #2b0045;
+}
+.nav-content {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  color: #fff;
+  height: 62px;
+  box-sizing: border-box;
+}
+.nav-content .logo {
+  width: 15%;
+  height: 52px;
+  float: left;
+  padding: 5px 0px;
+}
+.nav-content .menu {
+  width: 85%;
+  float: right;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.7;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-content .menu li {
+  width: 16.6%;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-content .menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+}
+.nav-content .menu li .home-icon {
+  background: url(../imgs/navigation_bar/homeico.png) center no-repeat;
+  background-size: cover;
+}
+.nav-content .menu li .list-icon {
+  background: url(../imgs/navigation_bar/listico.png) center no-repeat;
+  background-size: cover;
+}
+.nav-content .menu li .rule-icon {
+  background: url(../imgs/navigation_bar/ruleico.png) center no-repeat;
+  background-size: cover;
+}
+.nav-content .menu li .tour-icon {
+  background: url(../imgs/navigation_bar/tourico.png) center no-repeat;
+  background-size: cover;
+}
+.nav-content .menu li .champ-icon {
+  background: url(../imgs/navigation_bar/champico.png) center no-repeat;
+  background-size: cover;
+}
+.nav-content .menu li .kf-icon {
+  background: url(../imgs/navigation_bar/kf.png) center no-repeat;
+  background-size: cover;
+}
+.nav-content .menu li i {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  filter: brightness(0) invert(1);
+  margin-right: 0.5rem;
+}
+.nav-content .menu li:hover {
+  border-bottom: 4px solid #d6c4ee;
+  cursor: pointer;
+}
+.nav-content .menu li:hover a {
+  color: #d6c4ee;
+}
+.nav-content .menu li:hover i {
+  filter: brightness(1);
+}
+
+.content {
+  background-color: #501eb5;
+}
+.content .title {
+  padding: 4rem 0px;
+}
+.content__banner {
+  width: 100%;
+  position: relative;
+}
+.content__container {
+  margin: auto;
+  width: 100%;
+  max-width: 1350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(179, 8, 36);
+  min-height: 100vh;
+}
+.content__container .schedule_list {
+  width: 100%;
+  min-height: 305px;
+  background-color: #e3dcfe;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+.content__container .schedule_list .schedule_list-title-group {
+  display: flex;
+  max-width: 640px;
+  padding: 30px 0px;
+  box-sizing: border-box;
+  margin-left: 100px;
+}
+.content__container .schedule_list .schedule_list-title-group .cup {
+  margin-left: 30px;
+}
+.content__container .schedule_list .schedule_list-title-group .title-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+}
+.content__container .schedule_list .schedule_list-title-group .title-img h2 {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 0px 100px;
+  background-color: #e5007f;
+  color: #faef24;
+  border-radius: 2rem;
+  letter-spacing: 0.7rem;
+}
+.content__container .schedule_list .schedule_list-title-group .coin {
+  margin-top: 35px;
+}
+.content__container .schedule_list .schedule_list-rule-group {
+  background-color: #611987;
+  width: 100%;
+  min-height: 125px;
+  border-radius: 0px 0px 50px 50px;
+  position: relative;
+}
+.content__container .schedule_list .schedule_list-rule-group .text {
+  margin-left: 100px;
+  float: left;
+  color: #f6fafd;
+  font-weight: 300;
+  padding-top: 15px;
+}
+.content__container .schedule_list .schedule_list-rule-group .text p {
+  padding: 5px 0px;
+}
+.content__container .schedule_list .schedule_list-rule-group .calendar {
+  float: right;
+  display: flex;
+  position: absolute;
+  bottom: 3rem;
+  right: 10rem;
+}
+.content__container .schedule_list .schedule_list-rule-group .calendar-item:first-child {
+  margin-right: 13px;
+}
+.content__container .schedule_list .schedule_list-rule-group .calendar-item {
+  width: 178px;
+  height: 240px;
+  background: url(../imgs/schedule_list/calendar.png) center 0 no-repeat;
+}
+.content__container .schedule_list .schedule_list-rule-group .calendar-item-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #f6fafd;
+  margin-top: 70px;
+  text-align: center;
+}
+.content__container .schedule_list .schedule_list-rule-group .calendar-item-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin-top: 15px;
+  color: #ff6c47;
+  font-weight: 500;
+}
+.content__container .schedule_list .schedule_list-rule-group .calendar-item-text p {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+.content__container .schedule_list .schedule_list-rule-group .calendar-item-arrow {
+  margin: 4px 0px;
+}
+.content__container .tournament {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #0297e7;
+  border-radius: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.content__container .tournament__title {
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+.content__container .tournament__title img {
+  margin: 0 auto;
+}
+.content__container .tournament__body {
+  background-color: #e9f1fe;
+  margin: 0px 110px 30px 110px;
+  border-radius: 50px;
+}
+.content__container .tournament__body p {
+  color: #490bb4;
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: 500;
+  padding: 30px;
+}
+.content__container .championship {
+  width: 100%;
+  background-color: #e4f9f2;
+  border: 1px solid #0297e7;
+  border-radius: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0px 35px 0px;
+}
+.content__container .championship__title {
+  margin: 0px auto;
+}
+.content__container .championship__body {
+  display: flex;
+}
+.content__container .championship__body__cup {
+  display: flex;
+  width: 48%;
+  justify-content: space-between;
+  padding-left: 60px;
+  margin-top: 30px;
+}
+.content__container .championship__body__cup__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content__container .championship__body__cup__title {
+  color: #6a7672;
+  margin-top: 5px;
+}
+.content__container .championship__body__cup__reward {
+  color: #ff4f00;
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+.content__container .championship__body__cup--first {
+  margin-top: -60px;
+}
+.content__container .championship__body__cup--third {
+  margin-top: 40px;
+}
+.content__container .championship__body__reward {
+  width: 50%;
+}
+.content__container .championship__body__reward table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 0 auto;
+}
+.content__container .championship__body__reward table tr:first-child td {
+  background-color: #e4f9f2;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.content__container .championship__body__reward table .c22 {
+  position: relative;
+}
+.content__container .championship__body__reward table .c23 {
+  position: absolute;
+  top: 25%;
+  left: 48%;
+}
+.content__container .championship__body__reward table td {
+  background: #fff;
+  width: 250px;
+  height: 35px;
+  color: #6f7372;
+  vertical-align: middle;
+}
+.content__container .championship__body__reward table td:first-of-type {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.content__container .championship__body__reward table td:last-of-type {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.content__container .championship__body__reward table .rank {
+  display: inline-block;
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  width: 28px;
+  height: 28px;
+  background: url(../imgs/championship_list/medal.png) center no-repeat;
+  background-size: contain;
+}
+.content__container .championship__body__reward table .money {
+  display: inline-block;
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  width: 28px;
+  height: 28px;
+  background: url(../imgs/championship_list/money.png) center no-repeat;
+  background-size: contain;
+}
+.content__container .leaderboard {
+  width: 100%;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  display: flex;
+}
+.content__container .leaderboard__left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.content__container .leaderboard__left__top {
+  position: relative;
+  margin-left: -50px;
+}
+.content__container .leaderboard__left__top__slogan {
+  position: absolute;
+  bottom: 5%;
+  left: 14%;
+}
+.content__container .leaderboard__left__bottom {
+  display: flex;
+  gap: 15px;
+}
+.content__container .leaderboard__left__bottom--item {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.content__container .leaderboard__left__bottom--logo {
+  margin-right: 20px;
+}
+.content__container .leaderboard__left__bottom .leaderboard_rmb {
+  position: absolute;
+  display: inline-block;
+  font-size: 1.5rem;
+  bottom: -6px;
+  right: 0;
+  background-color: #501eb5;
+}
+.content__container .leaderboard__left__bottom--reward {
+  position: relative;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.content__container .leaderboard__left__bottom h5 {
+  position: absolute;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-top: -10px;
+  background-color: #501eb5;
+}
+.content__container .leaderboard__left__bottom--yuan {
+  display: inline-block;
+  color: #ffff03;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.4;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+.content__container .leaderboard__right {
+  width: 50%;
+}
+.content__container .leaderboard__right table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 0 auto;
+}
+.content__container .leaderboard__right table .num_col {
+  height: 37px;
+  width: 45px;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Microsoft YaHei", serif;
+  line-height: 1.9;
+}
+.content__container .leaderboard__right table .top-icon {
+  background: url(../imgs/leaderboard/stt1.png) center 0 no-repeat;
+}
+.content__container .leaderboard__right table .normal-icon {
+  background: url(../imgs/leaderboard/stt.png) center 0 no-repeat;
+}
+.content__container .leaderboard__right table thead td {
+  background-color: #00ccff;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  border: none;
+}
+.content__container .leaderboard__right table thead td:first-of-type {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.content__container .leaderboard__right table thead td:last-of-type {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.content__container .leaderboard__right table .c21 {
+  position: relative;
+}
+.content__container .leaderboard__right table .c22 {
+  position: absolute;
+  top: 25%;
+  left: 44%;
+}
+.content__container .leaderboard__right table .c23 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+}
+.content__container .leaderboard__right table td {
+  background: #fff;
+  width: 250px;
+  height: 39px;
+  color: #8a8889;
+  vertical-align: middle;
+  border-top: 1px solid #a589e6;
+  border-bottom: 1px solid #a589e6;
+}
+.content__container .leaderboard__right table tbody td:first-of-type {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top: 1px solid #a589e6;
+  border-left: 1px solid #a589e6;
+  border-bottom: 1px solid #a589e6;
+}
+.content__container .leaderboard__right table tbody td:last-of-type {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 1px solid #a589e6;
+  border-right: 1px solid #a589e6;
+  border-bottom: 1px solid #a589e6;
+}
+.content__container .leaderboard__right table .ico {
+  display: inline-block;
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  background-size: contain;
+}
+.content__container .leaderboard__right table .rank {
+  top: 10%;
+  left: 22%;
+  background: url(../imgs/leaderboard/medal.png) center no-repeat;
+}
+.content__container .leaderboard__right table .starman {
+  top: 10%;
+  left: 36%;
+  background: url(../imgs/leaderboard/starperson.png) center no-repeat;
+}
+.content__container .leaderboard__right table .money {
+  top: 10%;
+  left: 17%;
+  background: url(../imgs/leaderboard/money.png) center no-repeat;
+}/*# sourceMappingURL=style.css.map */
