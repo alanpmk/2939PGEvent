@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/8.4.7_swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<!-- <script>
@@ -42,17 +43,17 @@
 							<i class="home-icon"></i>首页
 						</a>
 					</li>
-					<li><a href="#!">
+					<li><a href="#news_title">
 							<i class="list-icon"></i>赛程列表
 						</a>
 					</li>
-					<li><a href="#!">
+					<li><a href="#rules_title">
 							<i class="rule-icon"></i>争霸赛规则</li>
 					</a>
-					<li><a href="#!">
+					<li><a href="#championship_title">
 							<i class="tour-icon"></i>争霸赛夺冠榜</li>
 					</a>
-					<li><a href="#!">
+					<li><a href="#leaderboard">
 							<i class="champ-icon"></i>排行榜</li>
 					</a>
 					<li><a href="#!">
@@ -63,7 +64,17 @@
 		</div>
 		<div class="content">
 			<div class=content__banner>
-				<img src="./imgs/banner.png" class="lazyload" alt="banner image">
+				<div class="swiper banner_swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slide">
+							<img src="./imgs/banner.png" alt="banner image">
+						</div>
+						<!-- <div class="swiper-slide slide">
+							<img src="./imgs/banner.png" alt="banner image">
+						</div> -->
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
 			</div>
 			<div class="content__container">
 
@@ -119,23 +130,162 @@
 						</div>
 					</div>
 				</div>
-				<div class="title">
+
+				<div class="title" id="news_title">
 					<img src="./imgs/star-line.png" alt="">
 				</div>
 
-				<div class="news_list">
-						<div class="news_list__top">
-							<div class="list-image">
-								<img src="./imgs/banner.png" alt="">
-							</div>
-							<div class="top_content">
-								<p class="top_content__text">可参与：20000人，已参与15000人</p>
-								<a href="#!" class="top_content__btn"><p>已结束</p></a>
+
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slide">
+							<div class="news_group">
+								<div class="w2">
+									<a href="#!" class="w2-second active" onclick="openChamp(event,'zhou1')">
+										<div>周赛</div>
+									</a>
+									<a href="#!" class="w2-second" onclick="openChamp(event,'yue1')">
+										<div>月赛</div>
+									</a>
+								</div>
+								<div class="gtr">
+									<div class="news_list" id="zhou1" style="display: block;">
+										<div class="news_list__top">
+											<div class="list-image">
+												<img src="./imgs/banner.png" alt="">
+											</div>
+											<div class="top_content">
+												<p class="top_content__text">可参与：20000人，已参与15000人</p>
+												<a href="#!" class="top_content__btn">
+													<p>已结束</p>
+												</a>
+											</div>
+										</div>
+										<div class="news_list__bottom">
+											<div class="news_list__bottom__content">
+												<p class="head">
+													PG电子争霸赛第一期
+												</p>
+												<p>
+													活动时间：2023-06-1020:40:00~2023-06-1022:00:03
+												</p>
+												<p class="guide">
+													比赛结果将在活动时间结束1小时后公布
+												</p>
+											</div>
+											<a href="#!" class="news_list__bottom__btn">报名参与
+											</a>
+										</div>
+									</div>
+									<div class="news_list" id="yue1" style="display: none;">
+										<div class="news_list__top">
+											<div class="list-image">
+												<img src="./imgs/banner.png" alt="">
+											</div>
+											<div class="top_content">
+												<p class="top_content__text">可参与：8000人，已参与22000人</p>
+												<a href="#!" class="top_content__btn top_content__btn-start">
+													<p>即将开始</p>
+												</a>
+											</div>
+										</div>
+										<div class="news_list__bottom">
+											<div class="news_list__bottom__content">
+												<p class="head">
+													PG电子争霸赛第二期
+												</p>
+												<p>
+													活动时间：2023-07-1 20:40:00 ~ 2023-07-31 22:00:03
+												</p>
+												<p class="guide">
+													比赛结果将在活动时间结束1小时后公布
+												</p>
+											</div>
+											<a href="#!" class="news_list__bottom__btn">报名参与
+											</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="news_list__bottom"></div>
+
+						<div class="swiper-slide slide">
+							<div class="news_group">
+								<div class="w2">
+									<a href="#!" class="w2-second w21 active" onclick="openChamp(event,'zhou2')">
+										<div>周赛</div>
+									</a>
+									<a href="#!" class="w2-second w21" onclick="openChamp(event,'yue2')">
+										<div>月赛</div>
+									</a>
+								</div>
+								<div class="gtr">
+									<div class="news_list" id="zhou2" style="display: block;">
+										<div class="news_list__top">
+											<div class="list-image">
+												<img src="./imgs/banner.png" alt="">
+											</div>
+											<div class="top_content">
+												<p class="top_content__text">可参与：20000人，已参与15000人</p>
+												<a href="#!" class="top_content__btn">
+													<p>已结束</p>
+												</a>
+											</div>
+										</div>
+										<div class="news_list__bottom">
+											<div class="news_list__bottom__content">
+												<p class="head">
+													PG电子争霸赛第一期
+												</p>
+												<p>
+													活动时间：2023-09-1020:40:00~2023-011-1022:00:03
+												</p>
+												<p class="guide">
+													比赛结果将在活动时间结束1小时后公布
+												</p>
+											</div>
+											<a href="#!" class="news_list__bottom__btn">报名参与
+											</a>
+										</div>
+									</div>
+									<div class="news_list" id="yue2" style="display: none;">
+										<div class="news_list__top">
+											<div class="list-image">
+												<img src="./imgs/banner.png" alt="">
+											</div>
+											<div class="top_content">
+												<p class="top_content__text">可参与：20000人，已参与15000人 YUEEEEEEEE</p>
+												<a href="#!" class="top_content__btn">
+													<p>已结束</p>
+												</a>
+											</div>
+										</div>
+										<div class="news_list__bottom">
+											<div class="news_list__bottom__content">
+												<p class="head">
+													PG电子争霸赛第一期
+												</p>
+												<p>
+													活动时间：2023-06-1020:40:00~2023-06-1022:00:03
+												</p>
+												<p class="guide">
+													比赛结果将在活动时间结束1小时后公布
+												</p>
+											</div>
+											<a href="#!" class="news_list__bottom__btn">报名参与
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
 				</div>
-				<div class="title">
+
+				<div class="title" id="rules_title">
 					<img src="./imgs/star-line.png" alt="">
 				</div>
 
@@ -155,84 +305,328 @@
 					</div>
 
 				</div>
-				<div class="title">
+				<div class="title" id="championship_title">
 					<img src="./imgs/championship_list/title.png" alt="">
 				</div>
 
-				<div class="championship">
-					<div class="championship__title">
-						<img src="./imgs/championship_list/zhou.png" alt="">
+				<div class="championship_group">
+					<!-- <div class="w2">
+						<a href="javascript:void(0)" onclick="openChamp(event, 'zhoubang');" class="w2-second active">
+							<div>周赛</div>
+						</a>
+						<a href="javascript:void(0)" onclick="openChamp(event, 'yuebang');" class="w2-second">
+							<div>月赛</div>
+						</a>
 					</div>
-					<div class="championship__body">
+					<div id="zhoubang" class="championship" style="display: block;">
+						<div class="championship__title">
+							<img src="./imgs/championship_list/zhou.png" alt="">
+						</div>
+						<div class="championship__body">
 
-						<div class="championship__body__cup">
-							<div class="championship__body__cup__item championship__body__cup--second">
-								<img src="./imgs/championship_list/2.png" alt="">
-								<p class="championship__body__cup__title">冠军第二名</p>
-								<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>59999</p>
+							<div class="championship__body__cup">
+								<div class="championship__body__cup__item championship__body__cup--second">
+									<img src="./imgs/championship_list/2.png" alt="">
+									<p class="championship__body__cup__title">亚军第二名</p>
+									<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>59999</p>
+								</div>
+								<div class="championship__body__cup__item championship__body__cup--first">
+									<img src="./imgs/championship_list/1.png" alt="">
+									<p class="championship__body__cup__title">冠军第一名</p>
+									<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>99999</p>
+								</div>
+								<div class="championship__body__cup__item championship__body__cup--third">
+									<img src="./imgs/championship_list/3.png" alt="">
+									<p class="championship__body__cup__title">季军第三名</p>
+									<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>19999</p>
+								</div>
 							</div>
-							<div class="championship__body__cup__item championship__body__cup--first">
-								<img src="./imgs/championship_list/1.png" alt="">
-								<p class="championship__body__cup__title">冠军第一名</p>
-								<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>99999</p>
-							</div>
-							<div class="championship__body__cup__item championship__body__cup--third">
-								<img src="./imgs/championship_list/3.png" alt="">
-								<p class="championship__body__cup__title">冠军第三名</p>
-								<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>19999</p>
+
+							<div class="championship__body__reward">
+								<table>
+									<tr>
+										<td class="c22">
+											<i class="rank"></i>
+											<span class="c23">
+												排名
+											</span>
+										</td>
+										<td class="c22">
+											<i class="money"></i>
+											<span class="c23">
+												奖金
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>第4-10名</td>
+										<td style="color:#ff4f00;">9999</td>
+									</tr>
+									<tr>
+										<td>第11-30名</td>
+										<td style="color:#ff4f00;">1999</td>
+									</tr>
+									<tr>
+										<td>第31-50名</td>
+										<td style="color:#ff4f00;">599</td>
+									</tr>
+									<tr>
+										<td>第51-100名</td>
+										<td style="color:#ff4f00;">399</td>
+									</tr>
+									<tr>
+										<td>第101-200名</td>
+										<td style="color:#ff4f00;">199</td>
+									</tr>
+									<tr>
+										<td>第201-300名</td>
+										<td style="color:#ff4f00;">99</td>
+									</tr>
+									<tr>
+										<td>第300名以外</td>
+										<td style="color:#ff4f00;">39</td>
+									</tr>
+								</table>
 							</div>
 						</div>
-
-						<div class="championship__body__reward">
-							<table>
-								<tr>
-									<td class="c22">
-										<i class="rank"></i>
-										<span class="c23">
-											排名
-										</span>
-									</td>
-									<td class="c22">
-										<i class="money"></i>
-										<span class="c23">
-											奖金
-										</span>
-									</td>
-								</tr>
-								<tr>
-									<td>第4-10名</td>
-									<td style="color:#ff4f00;">9999</td>
-								</tr>
-								<tr>
-									<td>第11-30名</td>
-									<td style="color:#ff4f00;">1999</td>
-								</tr>
-								<tr>
-									<td>第31-50名</td>
-									<td style="color:#ff4f00;">599</td>
-								</tr>
-								<tr>
-									<td>第51-100名</td>
-									<td style="color:#ff4f00;">399</td>
-								</tr>
-								<tr>
-									<td>第101-200名</td>
-									<td style="color:#ff4f00;">199</td>
-								</tr>
-								<tr>
-									<td>第201-300名</td>
-									<td style="color:#ff4f00;">99</td>
-								</tr>
-								<tr>
-									<td>第300名以外</td>
-									<td style="color:#ff4f00;">39</td>
-								</tr>
-							</table>
-						</div>
 					</div>
+					<div id="yuebang" class="championship" style="display: none;">
+						<div class="championship__title">
+							<img src="./imgs/championship_list/yue.png" alt="">
+						</div>
+						<div class="championship__body">
+
+							<div class="championship__body__cup">
+								<div class="championship__body__cup__item championship__body__cup--second">
+									<img src="./imgs/championship_list/2.png" alt="">
+									<p class="championship__body__cup__title">亚军第二名</p>
+									<p class="championship__body__cup__reward" style="color: #cf1381;"><span
+											style="font-size: 2.1rem;">¥</span>99999</p>
+								</div>
+								<div class="championship__body__cup__item championship__body__cup--first">
+									<img src="./imgs/championship_list/1.png" alt="">
+									<p class="championship__body__cup__title">冠军第一名</p>
+									<p class="championship__body__cup__reward" style="color: #cf1381;"><span
+											style="font-size: 2.1rem;">¥</span>199999</p>
+								</div>
+								<div class="championship__body__cup__item championship__body__cup--third">
+									<img src="./imgs/championship_list/3.png" alt="">
+									<p class="championship__body__cup__title">季军第三名</p>
+									<p class="championship__body__cup__reward " style="color: #cf1381;"><span
+											style="font-size: 2.1rem;">¥</span>39999</p>
+								</div>
+							</div>
+
+							<div class="championship__body__reward">
+								<table>
+									<tr>
+										<td class="c22">
+											<i class="rank"></i>
+											<span class="c23">
+												排名
+											</span>
+										</td>
+										<td class="c22">
+											<i class="money"></i>
+											<span class="c23">
+												奖金
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td>第4-10名</td>
+										<td style="color:#cf1381;">19999</td>
+									</tr>
+									<tr>
+										<td>第11-30名</td>
+										<td style="color:#cf1381;">9999</td>
+									</tr>
+									<tr>
+										<td>第31-50名</td>
+										<td style="color:#cf1381;">1999</td>
+									</tr>
+									<tr>
+										<td>第51-100名</td>
+										<td style="color:#cf1381;">999</td>
+									</tr>
+									<tr>
+										<td>第101-200名</td>
+										<td style="color:#cf1381;">399</td>
+									</tr>
+									<tr>
+										<td>第201-300名</td>
+										<td style="color:#cf1381;">199</td>
+									</tr>
+									<tr>
+										<td>第300名以外</td>
+										<td style="color:#cf1381;">99</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div> -->
+
+
 				</div>
+				<div class="swiper champion_slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slide">
+							<div id="zhoubang" class="championship">
+								<div class="championship__title">
+									<img src="./imgs/championship_list/zhou.png" alt="">
+								</div>
+								<div class="championship__body">
 
-				<div class="title">
+									<div class="championship__body__cup">
+										<div class="championship__body__cup__item championship__body__cup--second">
+											<img src="./imgs/championship_list/2.png" alt="">
+											<p class="championship__body__cup__title">亚军第二名</p>
+											<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>59999</p>
+										</div>
+										<div class="championship__body__cup__item championship__body__cup--first">
+											<img src="./imgs/championship_list/1.png" alt="">
+											<p class="championship__body__cup__title">冠军第一名</p>
+											<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>99999</p>
+										</div>
+										<div class="championship__body__cup__item championship__body__cup--third">
+											<img src="./imgs/championship_list/3.png" alt="">
+											<p class="championship__body__cup__title">季军第三名</p>
+											<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>19999</p>
+										</div>
+									</div>
+
+									<div class="championship__body__reward">
+										<table>
+											<tr>
+												<td class="c22">
+													<i class="rank"></i>
+													<span class="c23">
+														排名
+													</span>
+												</td>
+												<td class="c22">
+													<i class="money"></i>
+													<span class="c23">
+														奖金
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td>第4-10名</td>
+												<td style="color:#ff4f00;">9999</td>
+											</tr>
+											<tr>
+												<td>第11-30名</td>
+												<td style="color:#ff4f00;">1999</td>
+											</tr>
+											<tr>
+												<td>第31-50名</td>
+												<td style="color:#ff4f00;">599</td>
+											</tr>
+											<tr>
+												<td>第51-100名</td>
+												<td style="color:#ff4f00;">399</td>
+											</tr>
+											<tr>
+												<td>第101-200名</td>
+												<td style="color:#ff4f00;">199</td>
+											</tr>
+											<tr>
+												<td>第201-300名</td>
+												<td style="color:#ff4f00;">99</td>
+											</tr>
+											<tr>
+												<td>第300名以外</td>
+												<td style="color:#ff4f00;">39</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide slide">
+							<div id="yuebang" class="championship">
+								<div class="championship__title">
+									<img src="./imgs/championship_list/yue.png" alt="">
+								</div>
+								<div class="championship__body">
+
+									<div class="championship__body__cup">
+										<div class="championship__body__cup__item championship__body__cup--second">
+											<img src="./imgs/championship_list/2.png" alt="">
+											<p class="championship__body__cup__title">亚军第二名</p>
+											<p class="championship__body__cup__reward" style="color: #cf1381;"><span
+													style="font-size: 2.1rem;">¥</span>99999</p>
+										</div>
+										<div class="championship__body__cup__item championship__body__cup--first">
+											<img src="./imgs/championship_list/1.png" alt="">
+											<p class="championship__body__cup__title">冠军第一名</p>
+											<p class="championship__body__cup__reward" style="color: #cf1381;"><span
+													style="font-size: 2.1rem;">¥</span>199999</p>
+										</div>
+										<div class="championship__body__cup__item championship__body__cup--third">
+											<img src="./imgs/championship_list/3.png" alt="">
+											<p class="championship__body__cup__title">季军第三名</p>
+											<p class="championship__body__cup__reward " style="color: #cf1381;"><span
+													style="font-size: 2.1rem;">¥</span>39999</p>
+										</div>
+									</div>
+
+									<div class="championship__body__reward">
+										<table>
+											<tr>
+												<td class="c22">
+													<i class="rank"></i>
+													<span class="c23">
+														排名
+													</span>
+												</td>
+												<td class="c22">
+													<i class="money"></i>
+													<span class="c23">
+														奖金
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td>第4-10名</td>
+												<td style="color:#cf1381;">19999</td>
+											</tr>
+											<tr>
+												<td>第11-30名</td>
+												<td style="color:#cf1381;">9999</td>
+											</tr>
+											<tr>
+												<td>第31-50名</td>
+												<td style="color:#cf1381;">1999</td>
+											</tr>
+											<tr>
+												<td>第51-100名</td>
+												<td style="color:#cf1381;">999</td>
+											</tr>
+											<tr>
+												<td>第101-200名</td>
+												<td style="color:#cf1381;">399</td>
+											</tr>
+											<tr>
+												<td>第201-300名</td>
+												<td style="color:#cf1381;">199</td>
+											</tr>
+											<tr>
+												<td>第300名以外</td>
+												<td style="color:#cf1381;">99</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+				<div class="title" id="leaderboard">
 					<img src="./imgs/leaderboard/title.png" alt="">
 				</div>
 
@@ -243,11 +637,11 @@
 								<img src="./imgs/leaderboard/boydragon.png" alt="">
 							</div>
 							<div class="leaderboard__left__top__slogan">
-								<img src="./imgs/leaderboard/slogan.png" alt="">
+								<img src="./imgs/leaderboard/slogan.png" alt="" class="">
 							</div>
 						</div>
 						<div class="leaderboard__left__bottom">
-							<div class="leaderboard__left__bottom--item">
+							<div class="leaderboard__left__bottom--item lbi">
 								<div class="leaderboard__left__bottom--logo">
 									<img src="./imgs/leaderboard/1.png" alt="">
 								</div>
@@ -259,7 +653,7 @@
 								</div>
 							</div>
 
-							<div class="leaderboard__left__bottom--item">
+							<div class="leaderboard__left__bottom--item lbi">
 								<div class="leaderboard__left__bottom--logo">
 									<img src="./imgs/leaderboard/2.png" alt="">
 								</div>
@@ -270,7 +664,7 @@
 								</div>
 							</div>
 
-							<div class="leaderboard__left__bottom--item">
+							<div class="leaderboard__left__bottom--item lbi">
 								<div class="leaderboard__left__bottom--logo">
 									<img src="./imgs/leaderboard/3.png" alt="">
 								</div>
@@ -300,7 +694,7 @@
 
 						</div>
 
-						<table class="leaderboard__right__table">
+						<table class="leaderboard__right__table" id="leaderboard_table">
 							<thead>
 								<tr>
 									<td class="c21">
@@ -326,7 +720,7 @@
 							<tbody>
 								<tr>
 									<td style="width: 20%;"><span class="num_col top-icon">01</span></td>
-									<td>第4-10名</td>
+									<td>sta***</td>
 									<td style="width: 20%;">9999</td>
 								</tr>
 								<tr>
@@ -388,92 +782,218 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="left">
+					<img src="./imgs/game_icon/7.png" alt="">
+					<img src="./imgs/game_icon/2.png" alt="">
+					<img src="./imgs/game_icon/3.png" alt="">
+					<img src="./imgs/game_icon/4.png" alt="">
+					<img src="./imgs/game_icon/5.png" alt="">
+					<img src="./imgs/game_icon/6.png" alt="">
+					<img src="./imgs/game_icon/10.png" alt="">
+					<img src="./imgs/game_icon/12.png" alt="">
+
+				</div>
+				<div class="right">
+					<img src="./imgs/game_icon/8.png" alt="">
+					<img src="./imgs/game_icon/9.png" alt="">
+					<img src="./imgs/game_icon/10.png" alt="">
+					<img src="./imgs/game_icon/11.png" alt="">
+					<img src="./imgs/game_icon/12.png" alt="">
+					<img src="./imgs/game_icon/13.png" alt="">
+					<img src="./imgs/game_icon/14.png" alt="">
+					<img src="./imgs/game_icon/14.png" alt="">
+
+				</div>
+				<div class="zhoubang_left">
+					<!-- 周榜超联结 -->
+					<a href="#!">
+						<img src="./imgs/leaderboard/zhoubang_left.png" alt="zhoubang left">
+					</a>
+					<div class="yuebang_right">
+						<!-- 月榜超联结 -->
+						<a href="#!">
+							<img src="./imgs/leaderboard/yuebang_right.png" alt="yuebang right">
+						</a>
+					</div>
+				</div>
+
+
+
 			</div>
-
-
-
 		</div>
-	</div>
-	<script>
-		var x, i, j, l, ll, selElmnt, a, b, c;
-		/*look for any elements with the class "custom-select":*/
-		x = document.getElementsByClassName("leaderbord-custom-select");
-		l = x.length;
-		for (i = 0; i < l; i++) {
-			selElmnt = x[i].getElementsByTagName("select")[0];
-			ll = selElmnt.length;
-			/*for each element, create a new DIV that will act as the selected item:*/
-			a = document.createElement("DIV");
-			a.setAttribute("class", "select-selected");
-			a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-			x[i].appendChild(a);
-			/*for each element, create a new DIV that will contain the option list:*/
-			b = document.createElement("DIV");
-			b.setAttribute("class", "select-items select-hide");
-			for (j = 1; j < ll; j++) {
-				/*for each option in the original select element,
-				create a new DIV that will act as an option item:*/
-				c = document.createElement("DIV");
-				c.innerHTML = selElmnt.options[j].innerHTML;
-				c.addEventListener("click", function (e) {
-					/*when an item is clicked, update the original select box,
-					and the selected item:*/
-					var y, i, k, s, h, sl, yl;
-					s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-					sl = s.length;
-					h = this.parentNode.previousSibling;
-					for (i = 0; i < sl; i++) {
-						if (s.options[i].innerHTML == this.innerHTML) {
-							s.selectedIndex = i;
-							h.innerHTML = this.innerHTML;
-							y = this.parentNode.getElementsByClassName("same-as-selected");
-							yl = y.length;
-							for (k = 0; k < yl; k++) {
-								y[k].removeAttribute("class");
-							}
-							this.setAttribute("class", "same-as-selected");
-							break;
-						}
-					}
-					h.click();
-				});
-				b.appendChild(c);
-			}
-			x[i].appendChild(b);
-			a.addEventListener("click", function (e) {
-				/*when the select box is clicked, close any other select boxes,
-				and open/close the current select box:*/
-				e.stopPropagation();
-				closeAllSelect(this);
-				this.nextSibling.classList.toggle("select-hide");
-				this.classList.toggle("select-arrow-active");
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/8.4.7_swiper-bundle.min.js"></script>
+		<script>
+			let swiper = new Swiper(".mySwiper", {
+				pagination: {
+					el: ".swiper-pagination",
+				},
+				loop: false,
+				speed: 300,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				// autoplay: {
+				// 	delay: 4000,
+				// },
+				effect: 'creative',
+				creativeEffect: {
+					prev: {
+						// will set `translateZ(-250px)` on previous slides
+						translate: [0, 0, -250],
+					},
+					next: {
+						// will set `translateX(100%)` on next slides
+						translate: ['100%', 0, 0],
+					},
+				},
 			});
-		}
-		function closeAllSelect(elmnt) {
-			/*a function that will close all select boxes in the document,
-			except the current select box:*/
-			var x, y, i, xl, yl, arrNo = [];
-			x = document.getElementsByClassName("select-items");
-			y = document.getElementsByClassName("select-selected");
-			xl = x.length;
-			yl = y.length;
-			for (i = 0; i < yl; i++) {
-				if (elmnt == y[i]) {
-					arrNo.push(i)
-				} else {
-					y[i].classList.remove("select-arrow-active");
+			let swiper2 = new Swiper(".champion_slider", {
+				pagination: {
+					el: ".swiper-pagination",
+				},
+				loop: true,
+				speed: 300,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				// autoplay: {
+				// 	delay: 4000,
+				// },
+				effect: 'creative',
+				creativeEffect: {
+					prev: {
+						// will set `translateZ(-250px)` on previous slides
+						translate: [0, 0, -450],
+					},
+					next: {
+						// will set `translateX(100%)` on next slides
+						translate: ['100%', 0, 0],
+					},
+				},
+			});
+			let swiper3 = new Swiper(".banner_swiper", {
+				pagination: {
+					el: ".swiper-pagination",
+				},
+				loop: false,
+				speed: 300,
+				autoplay: {
+					delay: 5000,
+				},
+			});
+		</script>
+
+		<script>
+			var x, i, j, l, ll, selElmnt, a, b, c;
+			/*look for any elements with the class "custom-select":*/
+			x = document.getElementsByClassName("leaderbord-custom-select");
+			l = x.length;
+			for (i = 0; i < l; i++) {
+				selElmnt = x[i].getElementsByTagName("select")[0];
+				ll = selElmnt.length;
+				/*for each element, create a new DIV that will act as the selected item:*/
+				a = document.createElement("DIV");
+				a.setAttribute("class", "select-selected");
+				a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+				x[i].appendChild(a);
+				/*for each element, create a new DIV that will contain the option list:*/
+				b = document.createElement("DIV");
+				b.setAttribute("class", "select-items select-hide");
+				for (j = 1; j < ll; j++) {
+					/*for each option in the original select element,
+					create a new DIV that will act as an option item:*/
+					c = document.createElement("DIV");
+					c.innerHTML = selElmnt.options[j].innerHTML;
+					c.addEventListener("click", function (e) {
+						/*when an item is clicked, update the original select box,
+						and the selected item:*/
+						var y, i, k, s, h, sl, yl;
+						s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+						sl = s.length;
+						h = this.parentNode.previousSibling;
+						for (i = 0; i < sl; i++) {
+							if (s.options[i].innerHTML == this.innerHTML) {
+								s.selectedIndex = i;
+								h.innerHTML = this.innerHTML;
+								y = this.parentNode.getElementsByClassName("same-as-selected");
+								yl = y.length;
+								for (k = 0; k < yl; k++) {
+									y[k].removeAttribute("class");
+								}
+								this.setAttribute("class", "same-as-selected");
+								break;
+							}
+						}
+						h.click();
+					});
+					b.appendChild(c);
+				}
+				x[i].appendChild(b);
+				a.addEventListener("click", function (e) {
+					/*when the select box is clicked, close any other select boxes,
+					and open/close the current select box:*/
+					e.stopPropagation();
+					closeAllSelect(this);
+					this.nextSibling.classList.toggle("select-hide");
+					this.classList.toggle("select-arrow-active");
+				});
+			}
+			function closeAllSelect(elmnt) {
+				/*a function that will close all select boxes in the document,
+				except the current select box:*/
+				var x, y, i, xl, yl, arrNo = [];
+				x = document.getElementsByClassName("select-items");
+				y = document.getElementsByClassName("select-selected");
+				xl = x.length;
+				yl = y.length;
+				for (i = 0; i < yl; i++) {
+					if (elmnt == y[i]) {
+						arrNo.push(i)
+					} else {
+						y[i].classList.remove("select-arrow-active");
+					}
+				}
+				for (i = 0; i < xl; i++) {
+					if (arrNo.indexOf(i)) {
+						x[i].classList.add("select-hide");
+					}
 				}
 			}
-			for (i = 0; i < xl; i++) {
-				if (arrNo.indexOf(i)) {
-					x[i].classList.add("select-hide");
-				}
+			/*if the user clicks anywhere outside the select box,
+			then close all select boxes:*/
+			document.addEventListener("click", closeAllSelect);
+		</script>
+
+		<script>
+			function openChamp(evt, tabName) {
+				$(evt.currentTarget).siblings().removeClass('active');
+				$(evt.currentTarget).addClass('active');
+				list = $(evt.currentTarget).closest('.news_group').find('.news_list');
+				console.log($('#' + tabName));
+				$('#' + tabName).css('display', 'block');
+				$('#' + tabName).siblings().css('display', 'none');
 			}
-		}
-		/*if the user clicks anywhere outside the select box,
-		then close all select boxes:*/
-		document.addEventListener("click", closeAllSelect);
-	</script>
+		</script>
+		<script>
+			function makeid(length) {
+				let result = '';
+				const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+				const charactersLength = characters.length;
+				let counter = 0;
+				while (counter < length) {
+					result += characters.charAt(Math.floor(Math.random() * charactersLength));
+					counter += 1;
+				}
+				return result;
+			}
+			$('#leaderboard_table > tbody > tr > td:nth-child(2)').each(function (i, obj) {
+				$(this).html(makeid(4) + '***');
+			})
+		</script>
 </body>
 
 </html>
