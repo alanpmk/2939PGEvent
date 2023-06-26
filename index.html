@@ -8,11 +8,10 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/8.4.7_swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/style.css">
-	<!-- <script>
+	<script>
 		//   第二种方式
 		function urlredirect() {
 			var sUserAgent = navigator.userAgent.toLowerCase();
@@ -28,7 +27,7 @@
 			}
 		}
 		urlredirect();
-	</script> -->
+	</script>
 </head>
 
 <body>
@@ -309,165 +308,6 @@
 					<img src="./imgs/championship_list/title.png" alt="">
 				</div>
 
-				<div class="championship_group">
-					<!-- <div class="w2">
-						<a href="javascript:void(0)" onclick="openChamp(event, 'zhoubang');" class="w2-second active">
-							<div>周赛</div>
-						</a>
-						<a href="javascript:void(0)" onclick="openChamp(event, 'yuebang');" class="w2-second">
-							<div>月赛</div>
-						</a>
-					</div>
-					<div id="zhoubang" class="championship" style="display: block;">
-						<div class="championship__title">
-							<img src="./imgs/championship_list/zhou.png" alt="">
-						</div>
-						<div class="championship__body">
-
-							<div class="championship__body__cup">
-								<div class="championship__body__cup__item championship__body__cup--second">
-									<img src="./imgs/championship_list/2.png" alt="">
-									<p class="championship__body__cup__title">亚军第二名</p>
-									<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>59999</p>
-								</div>
-								<div class="championship__body__cup__item championship__body__cup--first">
-									<img src="./imgs/championship_list/1.png" alt="">
-									<p class="championship__body__cup__title">冠军第一名</p>
-									<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>99999</p>
-								</div>
-								<div class="championship__body__cup__item championship__body__cup--third">
-									<img src="./imgs/championship_list/3.png" alt="">
-									<p class="championship__body__cup__title">季军第三名</p>
-									<p class="championship__body__cup__reward"><span style="font-size: 2.1rem;">¥</span>19999</p>
-								</div>
-							</div>
-
-							<div class="championship__body__reward">
-								<table>
-									<tr>
-										<td class="c22">
-											<i class="rank"></i>
-											<span class="c23">
-												排名
-											</span>
-										</td>
-										<td class="c22">
-											<i class="money"></i>
-											<span class="c23">
-												奖金
-											</span>
-										</td>
-									</tr>
-									<tr>
-										<td>第4-10名</td>
-										<td style="color:#ff4f00;">9999</td>
-									</tr>
-									<tr>
-										<td>第11-30名</td>
-										<td style="color:#ff4f00;">1999</td>
-									</tr>
-									<tr>
-										<td>第31-50名</td>
-										<td style="color:#ff4f00;">599</td>
-									</tr>
-									<tr>
-										<td>第51-100名</td>
-										<td style="color:#ff4f00;">399</td>
-									</tr>
-									<tr>
-										<td>第101-200名</td>
-										<td style="color:#ff4f00;">199</td>
-									</tr>
-									<tr>
-										<td>第201-300名</td>
-										<td style="color:#ff4f00;">99</td>
-									</tr>
-									<tr>
-										<td>第300名以外</td>
-										<td style="color:#ff4f00;">39</td>
-									</tr>
-								</table>
-							</div>
-						</div>
-					</div>
-					<div id="yuebang" class="championship" style="display: none;">
-						<div class="championship__title">
-							<img src="./imgs/championship_list/yue.png" alt="">
-						</div>
-						<div class="championship__body">
-
-							<div class="championship__body__cup">
-								<div class="championship__body__cup__item championship__body__cup--second">
-									<img src="./imgs/championship_list/2.png" alt="">
-									<p class="championship__body__cup__title">亚军第二名</p>
-									<p class="championship__body__cup__reward" style="color: #cf1381;"><span
-											style="font-size: 2.1rem;">¥</span>99999</p>
-								</div>
-								<div class="championship__body__cup__item championship__body__cup--first">
-									<img src="./imgs/championship_list/1.png" alt="">
-									<p class="championship__body__cup__title">冠军第一名</p>
-									<p class="championship__body__cup__reward" style="color: #cf1381;"><span
-											style="font-size: 2.1rem;">¥</span>199999</p>
-								</div>
-								<div class="championship__body__cup__item championship__body__cup--third">
-									<img src="./imgs/championship_list/3.png" alt="">
-									<p class="championship__body__cup__title">季军第三名</p>
-									<p class="championship__body__cup__reward " style="color: #cf1381;"><span
-											style="font-size: 2.1rem;">¥</span>39999</p>
-								</div>
-							</div>
-
-							<div class="championship__body__reward">
-								<table>
-									<tr>
-										<td class="c22">
-											<i class="rank"></i>
-											<span class="c23">
-												排名
-											</span>
-										</td>
-										<td class="c22">
-											<i class="money"></i>
-											<span class="c23">
-												奖金
-											</span>
-										</td>
-									</tr>
-									<tr>
-										<td>第4-10名</td>
-										<td style="color:#cf1381;">19999</td>
-									</tr>
-									<tr>
-										<td>第11-30名</td>
-										<td style="color:#cf1381;">9999</td>
-									</tr>
-									<tr>
-										<td>第31-50名</td>
-										<td style="color:#cf1381;">1999</td>
-									</tr>
-									<tr>
-										<td>第51-100名</td>
-										<td style="color:#cf1381;">999</td>
-									</tr>
-									<tr>
-										<td>第101-200名</td>
-										<td style="color:#cf1381;">399</td>
-									</tr>
-									<tr>
-										<td>第201-300名</td>
-										<td style="color:#cf1381;">199</td>
-									</tr>
-									<tr>
-										<td>第300名以外</td>
-										<td style="color:#cf1381;">99</td>
-									</tr>
-								</table>
-							</div>
-						</div>
-					</div> -->
-
-
-				</div>
 				<div class="swiper champion_slider">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide slide">
@@ -929,6 +769,7 @@
 							}
 						}
 						h.click();
+						generateFakeBoard();
 					});
 					b.appendChild(c);
 				}
@@ -978,22 +819,49 @@
 				$('#' + tabName).siblings().css('display', 'none');
 			}
 		</script>
-		<script>
-			function makeid(length) {
-				let result = '';
-				const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
-				const charactersLength = characters.length;
-				let counter = 0;
-				while (counter < length) {
-					result += characters.charAt(Math.floor(Math.random() * charactersLength));
-					counter += 1;
-				}
-				return result;
+	<script>
+		function makeName(length) {
+			let result = '';
+			const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+			const charactersLength = characters.length;
+			let counter = 0;
+			while (counter < length) {
+				result += characters.charAt(Math.floor(Math.random() * charactersLength));
+				counter += 1;
 			}
-			$('#leaderboard_table > tbody > tr > td:nth-child(2)').each(function (i, obj) {
-				$(this).html(makeid(4) + '***');
+			return result;
+		}
+		function getRandomNumber(low, high) {
+			let r = Math.floor(Math.random() * (high - low + 1)) + low;
+			return r;
+		}
+
+		function makeMoney(input) {
+			return parseInt(input) - getRandomNumber(6000, 18000);
+		}
+		function addComma(money) {
+			let result = money.toString().split("");
+			let newResult = [];
+			for (let i = 0; i < result.length; i++) {
+				if ((result.length - i) % 3 === 0 && i !== 0) {
+					newResult.push(",");
+				}
+				newResult.push(result[i]);
+			}
+			return newResult.join("");
+
+		}
+		function generateFakeBoard() {
+			let input_money = 600000 + getRandomNumber(9000, 300000);
+			$('#leaderboard_table > tbody > tr').each(function (i, obj) {
+				$(this).find('td:nth-child(2)').html(makeName(4) + '***');
+				$(this).find('td:nth-child(3)').html(addComma(makeMoney(input_money)));
+				input_money = makeMoney(input_money - getRandomNumber(300, 10000));
 			})
-		</script>
+		}
+		generateFakeBoard();
+
+	</script>
 </body>
 
 </html>
